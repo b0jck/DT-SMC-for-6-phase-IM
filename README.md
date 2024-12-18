@@ -6,3 +6,23 @@ The implemented controller is based on **Discrete Time Sliding Mode Control**. A
 
 ## Repository Structure
 The current repository is organised as follows:
+### simulation.slx
+Main Simulink simulation file. Must be run to visualize all plots. Also loads "all_parameters.mat" into the WorkSpace automatically (in order to work properly).
+
+### parameters.m
+Matlab file that generates "all_parameters.mat". Can also be used to manually load all simulation parameters.
+
+### all_parameters.mat
+.mat file used to store system parameters easily. Called by "simulation.slx"
+
+### animate_rotor.m (optional)
+Simple Matlab animation to visualize 6-phase voltages of the motor. Loads data from "rotor_pos.mat" and "voltages.mat"
+
+### rotor_pos.mat and voltages.mat (optional)
+.mat file used to store rotor position and phase voltages. Exported by "simulation.slx". Called by "animate_rotor.m"
+
+### Report.pdf
+Short operational report done by me and my group.
+
+### Presentation.pdf
+Project presentation made in PowerPoint. Only available in .pdf due to GitHub file size limitations
